@@ -12,6 +12,8 @@ RUN conda install -c conda-forge jupyter_contrib_nbextensions
 RUN jupyter nbextension install --py widgetsnbextension --sys-prefix
 RUN jupyter nbextension enable  --py widgetsnbextension --sys-prefix
 RUN pip3 install oauthenticator
+RUN pip3 install nbgitpuller
+RUN jupyter serverextension enable --py nbgitpuller --sys-prefix
 ##
 ## This should allow users to turn off extension if they do not want them.
 ##
