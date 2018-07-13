@@ -19,3 +19,4 @@ RUN jupyter serverextension enable --py nbgitpuller --sys-prefix
 ##
 USER jovyan
 RUN jupyter nbextensions_configurator enable
+RUN jupyter serverextension enable --sys-prefix nbgitpuller
