@@ -11,6 +11,7 @@ RUN ln -s /bin/tar /bin/gtar
 RUN /usr/bin/apt-get install unzip
 RUN ln -s /usr/lib/git-core/* /usr/local/bin
 RUN /opt/conda/bin/pip install --upgrade pip
+RUN pip install --upgrade autopep8
 RUN conda install -c conda-forge jupyter_contrib_nbextensions 
 RUN conda install -c conda-forge jupyter_nbextensions_configurator
 RUN jupyter nbextension enable --py jupyter_contrib_nbextensions --sys-prefix
