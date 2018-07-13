@@ -3,9 +3,9 @@
 #
 #  manual build   docker build --rm --tag haas-gitauth .
 #
-
 FROM jupyter/datascience-notebook
 USER root
+#
 #
 RUN ln -s /bin/tar /bin/gtar
 RUN /usr/bin/apt-get install unzip
@@ -28,7 +28,7 @@ RUN jupyter serverextension enable --py nbgitpuller --sys-prefix
 #
 RUN pip3 install git+https://github.com/data-8/nbinteract.git
 RUN pip3 install nbinteract
-RUN jupyter nbextensions_configurator enable --user
+#RUN jupyter nbextensions_configurator enable --user
 #
 #
 #
